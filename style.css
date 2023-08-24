@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: black;
+  z-index: 800;
 }
 
 .div-1 {
@@ -13,6 +14,7 @@ background-color: rgb(8, 8, 8);
 top: 0;
 left: 0;
 padding: 20px 19px;
+z-index: 999;
 }
 
 .nav-1 .nav_option {
@@ -51,7 +53,7 @@ color: white;
 }
 
 .div-2 {
-  height: 80px;
+  height: 10px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -63,29 +65,46 @@ color: white;
   margin: 20px;
 }
 
-@media (min-width: 700px) {
+@media only screen and (min-width: 915px) {
 
-  .div-6 span {
+  .header-1{
+    display: flex;
     line-height: 2.5;
-    float: right;
-    margin: 15px 90px 0px 40px;
+    margin: 8px;
+    padding: 5px;
+    position: fixed;
+    right: 25px;
+    z-index: 5;
+    background-color:rgb(22, 22, 22);
+    width: 22%;
+    border-radius: 12px;
+    justify-content:center;
+    
   }
 
   .header-1 a {
+    text-decoration: none;
+  }
+
+  .signup {
     font-weight: bolder;
     font-family: "DM Sans", sans-serif;
     color: grey;
+    margin-left: 100px;
   }
 
-  .login span {
+  .login{
     text-align: center;
     background-color: white;
+    font-family: "DM Sans", sans-serif;
     border-radius: 40px;
-    width: 70px;
+    width: 80px;
     height: 38px;
     color: black;
     font-weight: bolder;
+    margin-right: 100px;
     cursor: pointer;
+    position: fixed;
   }
 
   .signup :hover {
@@ -96,7 +115,6 @@ color: white;
     transform: scale(1.1);
   }
 }
-
 
 .div-3 {
   display: flex;
@@ -199,20 +217,30 @@ color: white;
   color: grey;
 }
 
-@media only screen and (max-width: 700px) {
-  .div-5 {
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
-    position: fixed;
-    z-index: 999;
-  }
+@media only screen and (max-width: 915px) {
 
-  .humburger span {
-    width: 50px;
+  /* .div-5 {
+    display: flex;
+    justify-content:right;
+    position: fixed;
+    z-index: 900;
+    right: 50px;
+    margin: 25px;
+
+  } */
+
+  .humburger span{
+    width: 20px;
     height: 4px;
     background-color: white;
     border-radius: 40px;
-    right: 0;
+    display: flex;
+    justify-content:right;
+    position: fixed;
+    z-index: 900;
+    right: 50px;
+    margin: 25px;
+    line-height: 2.5;
+
   }
 }
